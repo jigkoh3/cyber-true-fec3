@@ -1,0 +1,65 @@
+<!-- Header -->
+<div id="header" ng-include="'views/common/headerserved.html'"></div>
+<!-- Main Wrapper -->
+<div id="wrapper">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-2" ></div>
+            <div class="col-md-10" >
+                <h4>{{trueProduct.productName}}</h4></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4"><img src="images/product/{{trueProduct.productImg}}.png" /></div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row" ng-repeat="itm  in trueProduct.productColor">
+                        <div class="col-md-2" style="margin-top:21px;">
+                            <img src="images/product/{{itm.colorImg}}.png" /></div>
+                        <div class="col-md-10">
+                            <div class="row ">
+                                <div class="col-md-3" ng-repeat="itmMem in itm.memSize">
+                                    <!-- <p><center>Avaliable</center></p><br> -->
+                                    <label style="color:green;">Avaliable</label>
+                                    <br>
+                                    <button>{{itmMem.sizeName}}
+                                        <br>{{itmMem.price}}</button>
+                                    <br>
+                                    <input type="number" ng-model="itmMem.piece" ng-change="calculate(itmMem)" 
+                                    style="text-align:center; width:75px; border-style:none;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row top_tll">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                    <h4>{{trueProduct.productName}}</h4>
+                </div>
+                <div class="col-md-3"  >
+                    <h4 >  {{calculate()}}  บาท</h4>
+                </div>
+            </div>
+            <div class="row" style="height:30px;">
+                
+            </div>
+            <div class="row">
+
+            <div class="col-md-8"></div>
+            <div class="col-md-4" >
+                 <button style="width:100px; ">โปรโมชั่น</button><button style="margin-left:20px;">ซื้อเครื่องเปล่า</button></div>
+            
+        </div>
+    </div>
+</div>
+<!-- Footer style="border-size:0.5px; border-style:solid;"-->
+<footer class="footer" ng-include="'views/common/footer.html'"></footer>
+</div>
