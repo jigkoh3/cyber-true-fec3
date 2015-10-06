@@ -1,0 +1,33 @@
+<!-- Header -->
+<div id="header" ng-include="'views/common/headerserved.html'"></div>
+<!-- Main Wrapper -->
+<div id="wrapper">
+    <div class="container">
+        <div class="row content">
+            <div class="col-md-12">
+                <div class="row">
+                    <h4>เปิดบริการใหม่</h4>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label text-right">Sale ID</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" ng-model="userinfo.id">
+                        </div>
+                        <label class="col-sm-2 control-label text-right">Sale Name</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" ng-model="userinfo.name">
+                        </div>
+                        <label class="col-sm-2 control-label text-right">เบอร์มือถือ</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" ng-model="userinfo.mobileno">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer style="border-size:0.5px; border-style:solid;"-->
+<footer class="footer" ng-include="'views/common/footer.html'"></footer>
+</div>
